@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bist's Gym</title>
+    <link rel="stylesheet" href="../static/PageStyle.css">
+    <script src="../static/GymScript.js"></script>
+</head>
+<body onload="resetCounter()">
+    <div class="loggedIn">
+        <div class="top"></div>
+        <div class="heading">
+            <div class="headingTop">
+                <h1>חדר כושר</h1> 
+            </div>
+            
+            <div class="headingBottom">
+                <h1>בית הספר לטיסה</h1>
+            </div>
+        </div>
+        <div class="button"><img src="../media/button/button.png" alt="Start training button" height="100%" id="mainButton" onclick="clickButton()"></div>
+        <div class="underButton" id="buttonText"><h1>!לחץ כדי להתחיל להתאמן</h1></div>
+        <div class="aboveHours"><h1>:שעות פתיחה</h1></div>
+        <div class="hours">
+            <h1>19:30-22:30</h1>
+        </div>
+        <div class="navBar">
+            <div class="history">
+                <div class="sideIcon" id="historyIcon">
+                    <a href="./History.html">
+                    <img src="../media/icons/history.png" alt="historyIcon">
+                    </a>
+                </div>
+                <div id="historyText"><h5>היסטוריית אימונים</h5></div>
+            </div>
+            <div class="main active">
+                <div id="mainIcon" class="mainIcon">
+                    <img src="../media/icons/mainPage.png" alt="mainIcon">
+                </div>
+                <div id="mainText"><h5>!אימון</h5></div>
+            </div>
+            <div class="meter" id="meter"> 
+                <div class="sideIcon"  id="meterIcon" >
+                   <a href="./LoadMeter.html">
+                    <img src="../media/icons/loadMeter.png" alt="meterIcon">
+                    </a>
+                </div>
+                <div id="meterText"><h5>מדד העומס</h5></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

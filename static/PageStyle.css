@@ -1,0 +1,349 @@
+:root {
+    --backYellow: #dfcc22;
+    --topYellow: #efd912;
+    --navColor: #e3d141;
+    --fontColor: #373637;
+    --navFontColor: #1c1c14;
+}
+
+a[href], input[type='submit'], input[type='image'], label[for], select, button, .pointer {
+    cursor: pointer;
+}
+ 
+@media screen and (min-width: 650px) {
+    body {
+        background-color: var(--fontColor);
+    }
+}
+
+* {
+    @font-face {
+        font-family: defaultFont;
+        src: url(../media/font/SecularOne-Regular.ttf);
+    }
+    font-variant-numeric: diagonal-fractions;
+    text-align: center;
+    margin: auto;
+    color: var(--fontColor);
+    /* border: black 1px solid;  */
+}
+
+.loggedIn {
+    background-color: var(--backYellow);
+    display: grid;
+    grid-template-areas: 
+    'top'
+    'heading'
+    'button'
+    'underButton'
+    'aboveHours'
+    'hours'
+    'navBar';
+    border-right: 2px solid black;
+    border-left: 2px solid black;
+    width: 650px;
+}
+
+.top {
+    grid-area: top;
+    background-color: var(--topYellow);
+    height: 3vh;
+}
+
+
+.heading {
+    grid-area: heading;
+    height: 17vh;
+    background-color: var(--topYellow);
+    width: 650px;
+    text-align: center;
+    font-size: 25px;
+    vertical-align: middle;
+   
+}
+
+.loadHead {
+    font-size: 70px;
+}
+
+.headingTop {
+   vertical-align: top;
+}
+
+.headingBottom {
+    vertical-align: bottom;
+}
+
+
+.button {
+    grid-area: button;
+    height: 33vh;
+}
+
+
+.underButton {
+    grid-area: underButton;
+    height: 10vh;
+}
+
+
+.aboveHours {
+    grid-area: aboveHours;
+    height: 5vh;
+    font-size: smaller;
+    vertical-align: bottom;
+}
+
+
+.hours {
+    display: flex;
+    grid-area: hours;
+    height: 20vh;
+    width: 650px;
+    background-position: center;
+    background-image: url("../media/OpenHours/OpenHoursBack.png");
+    background-repeat: no-repeat;
+    background-size: 55%;
+    font-size: 27px;
+}
+
+
+/* Navigation Bar */
+
+
+.navBar {
+    grid-area: navBar;
+    height: 12vh;
+    color: var(--navFontColor);
+    background-color: var(--navColor);
+    width: 650px;
+    margin:auto;
+    display: grid;
+    grid-template-areas: "history main meter";
+   
+}
+
+.history {
+    grid-area: history;
+    background-color: var(--navColor);
+    background-size: cover;
+}
+
+.main {
+    grid-area: main;
+    background-color: var(--topYellow);
+    background-size: cover;
+}
+
+.meter {
+    grid-area: meter;
+    background-color: var(--navColor);
+    background-size: cover;
+}
+
+.sideIcon img {
+    height: 60px;  
+}
+
+.sideIcon {
+    vertical-align: top;
+}
+
+.mainIcon img {
+    height: 70px;
+    width: 90px;
+}
+
+.mainIcon {
+    vertical-align: top;
+    align-items: center;
+}
+
+.active {
+    background-color: rgb(255, 255, 0);
+    
+}
+
+/* Load Meter Page */
+
+.update {
+    grid-area: update;
+    height: 5vh;
+    display: grid;
+    grid-template-areas: 'text img';
+}
+
+.meterImg {
+    background-color: var(--backYellow);
+    grid-area: meter;
+    height: 43vh;
+}
+
+.message {
+    grid-area: message;
+    display: flex, grid;
+    height: 20vh;
+    width: 650px;
+    background-position: center;
+    background-image: url("../media/OpenHours/OpenHoursBack.png");
+    background-repeat: no-repeat;
+    background-size: 55%;
+    font-size: 27px;
+    grid-template-areas: 
+    'm1'
+    'm2'
+    'm3';
+    
+}
+
+.loadMeter {
+    background-color: var(--backYellow);
+    display: grid;
+    grid-template-areas: 
+    'top'
+    'heading'
+    'update'
+    'meter'
+    'message'
+    'navBar';
+    border-right: 2px solid black;
+    border-left: 2px solid black;
+    width: 650px;
+}
+
+.updateText {
+    grid-area: text;
+}
+
+.updateImg {
+    grid-area: img;
+    padding: 2px;
+}
+
+.message1 {
+    grid-area: m1;
+    padding: 5px;
+    padding-top: 20px;
+}
+
+.message2 {
+    grid-area: m2;
+    padding: 5px;
+}
+
+.message3 {
+    grid-area: m3;
+    padding: 5px;
+}
+
+/* History Page */
+
+.historyPage {
+    background-color: var(--backYellow);
+    display: grid;
+    grid-template-areas: 
+    'top'
+    'heading'
+    'listText'
+    'scrollList'
+    'navBar';
+    border-right: 2px solid black;
+    border-left: 2px solid black;
+    width: 650px;
+}
+
+/*
+.listText {
+    height: 8vh;
+    grid-area: listText;
+    display: grid;
+    grid-template-areas: 'list3 list2 list1';
+    width: 650px;
+}
+*/
+
+.listText {
+    height: 68vh;
+    grid-area: listText;
+    display: table;
+    width: 650px;
+}
+
+/*
+.scrollList {
+    height: 60vh;
+    grid-area: scrollList;
+    overflow: auto;
+    align-items: center;
+}
+*/
+
+/*
+.scrollTable {
+    overflow-y: auto;
+    display:block;
+    height: 60vh;
+    width: 600px;
+    border: none;
+}
+*/
+
+table {
+    table-layout: fixed;
+    width: 650px;
+    border-collapse: collapse;
+  }
+  
+  thead th:nth-child(1) {
+    width: 50%;
+  }
+  
+  thead th:nth-child(2) {
+    width: 25%;
+  }
+  
+  thead th:nth-child(3) {
+    width: 25%;
+  }
+  
+  
+  th,td {
+    padding: 20px;
+  }
+
+
+tbody tr {
+    background-image: url("../media/HistoryTable/tableRowBack.png");
+    background-size: 100%;
+    width: 650px;
+    height: 50px;
+    background-repeat: no-repeat;
+  }
+
+th {
+    letter-spacing: 2px;
+  }
+  
+  td {
+    letter-spacing: 1px;
+  }
+  
+  tbody td {
+    text-align: center;
+  }
+  
+
+/*
+.list1 {
+    grid-area: list1;
+}
+
+.list2 {
+    grid-area: list2;
+}
+
+.list3 {
+    grid-area: list3;
+}
+
+*/

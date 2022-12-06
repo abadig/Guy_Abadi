@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bist's Gym</title>
+    <link rel="stylesheet" href="../static/PageStyle.css">
+    <script src="../static/GymScript.js"></script>
+</head>
+<body>
+    <div class="signUp">
+        <div class="top"></div>
+        <div class="logLogo">
+            <img src="../media/icons/logLogo.png" alt="Our Logo">
+        </div>
+        <div class="welcomeSign">
+            <h2>!ברוך הבא</h2>
+        </div>
+        <div class="changePageSign">
+            <div class="otherPage log"> <a href="./Login.html" id="otherP"><h4>התחברות</h4></a></div>
+            <div class="currPage sign"> <h4>הרשמה</h4></div>
+        </div>
+        <div class="detailsSign">
+            <form action="../views/Login.html">
+                <input type="text" placeholder="מספר אישי" name="armyID" required> <img class= "LoginLogo" src="../media/icons/username.png" alt="" height="30px" width="30px">
+                <input type="email" placeholder="מייל" name="email" required> <img class= "LoginLogo" src="../media/icons/email.png" alt="" height="20px" >
+                <input type="password" placeholder="סיסמה" name="psw" required> <img class= "LoginLogo" src="../media/icons/password.png" alt="" height="30px" width="25px">
+                <input type="password" placeholder="אישור סיסמה" name="pswConfirm" required> <img class= "LoginLogo" src="../media/icons/password.png" alt="" height="30px" width="25px">
+                <select class="minimal" id="profile" name="profile" required> 
+                    <option value="null" class="nullProfile">פרופיל צבאי</option> 
+                    <option value="97">97</option>
+                    <option value="82">82</option>
+                    <option value="72">72</option>
+                    <option value="64">64</option>
+                    <option value="45">45</option>
+                    <option value="25">25</option>
+                    <option value="24">24</option>
+                    <option value="21">21</option>
+                  </select>
+                  <img class= "LoginLogo" src="../media/icons/profile.png" alt="" height="30px" width="25px">
+                  <input type="time"  placeholder="minutes" name="time" required> <img class= "LoginLogo" src="../media/icons/time.png" alt="" height="30px" width="25px">
+
+                <button type="submit"><h3>!הירשם</h3></button>
+                <h5>?שכחת סיסמה</h5>
+            </form>
+        </div>
+        <div class="navBarSign">
+        </div>
+    </div>
+</body>
+</html>

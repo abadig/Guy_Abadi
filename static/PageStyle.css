@@ -1,16 +1,18 @@
 :root {
-    --backYellow: #dfcc22;
-    --topYellow: #efd912;
-    --navColor: #e3d141;
-    --fontColor: #373637;
+    --backYellow: #6eb2cc;
+    --topYellow: #2f6a87;
+    --navColor: #d4f3f6;
+    --fontColor: #000000;
     --navFontColor: #1c1c14;
+    --orange: #ea6c36;
+    --brown: #9a5131;
 }
 
 a[href], input[type='submit'], input[type='image'], label[for], select, button, .pointer {
     cursor: pointer;
 }
  
-@media screen and (min-width: 650px) {
+@media screen and (min-width: 550px) {
     body {
         background-color: var(--fontColor);
     }
@@ -28,6 +30,10 @@ a[href], input[type='submit'], input[type='image'], label[for], select, button, 
     /* border: black 1px solid;  */
 }
 
+body {
+    overflow: hidden;
+}
+
 .loggedIn {
     background-color: var(--backYellow);
     display: grid;
@@ -41,12 +47,11 @@ a[href], input[type='submit'], input[type='image'], label[for], select, button, 
     'navBar';
     border-right: 2px solid black;
     border-left: 2px solid black;
-    width: 650px;
+    width: 550px;
 }
 
 .top {
     grid-area: top;
-    background-color: var(--topYellow);
     height: 3vh;
 }
 
@@ -55,7 +60,7 @@ a[href], input[type='submit'], input[type='image'], label[for], select, button, 
     grid-area: heading;
     height: 17vh;
     background-color: var(--topYellow);
-    width: 650px;
+    width: 550px;
     text-align: center;
     font-size: 25px;
     vertical-align: middle;
@@ -99,11 +104,11 @@ a[href], input[type='submit'], input[type='image'], label[for], select, button, 
     display: flex;
     grid-area: hours;
     height: 20vh;
-    width: 650px;
+    width: 550px;
     background-position: center;
     background-image: url("../media/OpenHours/OpenHoursBack.png");
     background-repeat: no-repeat;
-    background-size: 55%;
+    background-size: 65%;
     font-size: 27px;
 }
 
@@ -116,10 +121,11 @@ a[href], input[type='submit'], input[type='image'], label[for], select, button, 
     height: 12vh;
     color: var(--navFontColor);
     background-color: var(--navColor);
-    width: 650px;
+    width: 550px;
     margin:auto;
     display: grid;
     grid-template-areas: "history main meter";
+    align-items: center;
    
 }
 
@@ -160,7 +166,7 @@ a[href], input[type='submit'], input[type='image'], label[for], select, button, 
 }
 
 .active {
-    background-color: rgb(255, 255, 0);
+    background-color: rgb(255, 255, 255);
     
 }
 
@@ -183,11 +189,11 @@ a[href], input[type='submit'], input[type='image'], label[for], select, button, 
     grid-area: message;
     display: flex, grid;
     height: 20vh;
-    width: 650px;
+    width: 550px;
     background-position: center;
     background-image: url("../media/OpenHours/OpenHoursBack.png");
     background-repeat: no-repeat;
-    background-size: 55%;
+    background-size: 65%;
     font-size: 27px;
     grid-template-areas: 
     'm1'
@@ -208,7 +214,7 @@ a[href], input[type='submit'], input[type='image'], label[for], select, button, 
     'navBar';
     border-right: 2px solid black;
     border-left: 2px solid black;
-    width: 650px;
+    width: 550px;
 }
 
 .updateText {
@@ -249,7 +255,7 @@ a[href], input[type='submit'], input[type='image'], label[for], select, button, 
     'navBar';
     border-right: 2px solid black;
     border-left: 2px solid black;
-    width: 650px;
+    width: 550px;
 }
 
 /*
@@ -258,7 +264,7 @@ a[href], input[type='submit'], input[type='image'], label[for], select, button, 
     grid-area: listText;
     display: grid;
     grid-template-areas: 'list3 list2 list1';
-    width: 650px;
+    width: 550px;
 }
 */
 
@@ -266,7 +272,11 @@ a[href], input[type='submit'], input[type='image'], label[for], select, button, 
     height: 68vh;
     grid-area: listText;
     display: table;
-    width: 650px;
+    width: 550px;
+    overflow-y: scroll;
+    max-height: 68vh;
+    /* position: absolute; */
+    /* right: 550px; */
 }
 
 /*
@@ -290,8 +300,12 @@ a[href], input[type='submit'], input[type='image'], label[for], select, button, 
 
 table {
     table-layout: fixed;
-    width: 650px;
     border-collapse: collapse;
+    /* overflow-y: scroll; */
+    align-items: center;
+    max-width: 550px;
+    width: 100%;
+
   }
   
   thead th:nth-child(1) {
@@ -307,21 +321,59 @@ table {
   }
   
   
-  th,td {
+  table th,td {
     padding: 20px;
+    text-align: center;
+    
   }
 
 
-tbody tr {
+/* tbody tr {
+    /*
     background-image: url("../media/HistoryTable/tableRowBack.png");
+    background-size: contain;
     background-size: 100%;
-    width: 650px;
+    width: 550px;
     height: 50px;
+    
     background-repeat: no-repeat;
+    
+
+  
+  }
+
+  */
+  
+
+   tr {
+    height: 10px;
+    overflow: hidden;
+    min-height: 40px;
+    max-height: 40px;
+    text-align: center;
+    align-items: center;
+  }
+
+  tbody {
+
+    height: 475px;
+    /* width: 450px; */
+    overflow-y: scroll;
+    align-items: center;
+    display: block;
+  }
+
+  tbody tr:nth-child(odd) {
+    background-color: var(--orange);
+  }
+  
+  tbody tr:nth-child(even) {
+    background-color: var(--brown);
   }
 
 th {
     letter-spacing: 2px;
+    position: sticky;
   }
   
   td {
@@ -330,20 +382,175 @@ th {
   
   tbody td {
     text-align: center;
+
+  }
+
+
+/* log in page */
+
+
+.login {
+    background-color: var(--backYellow);
+    display: grid;
+    grid-template-areas: 
+    'top'
+    'logLogo'
+    'welcome'
+    'changePage'
+    'details'
+    'navBarLS';
+    width: 550px;
+}
+
+
+.logLogo {
+    grid-area: logLogo;
+    height: 15vh;
+    vertical-align: bottom;
+    padding: 20px;
+}
+
+.welcome {
+    grid-area: welcome;
+    height: 5vh;
+    vertical-align: middle;
+    padding: 40px;
+}
+
+.changePage {
+    grid-area: changePage;
+    height: 8vh;
+    display: grid;
+    grid-template-areas: "sign log";
+    
+}
+
+.sign {
+    grid-area: sign;
+    padding: 10px;
+    padding-right: 30px;
+}
+
+.log {
+    grid-area: log;
+    padding: 10px;
+    padding-left: 30px;
+    display: block;
+}
+
+
+
+.otherPage {
+    opacity: 50%;
+}
+
+.otherPage a {
+    border-bottom: none;
+    color: var(--fontColor);
+}
+
+.details {
+    grid-area: details;
+    height: 37.5vh;
+    padding: 16px;
+}
+
+/* Set a style for all buttons */
+button {
+    background-color: var(--orange);
+    color: var(--fontColor);
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 53%;
+    font-family: defaultFont;
   }
   
+  /* Add a hover effect for buttons */
+  button:hover {
+    opacity: 0.8;
+  }
 
-/*
-.list1 {
-    grid-area: list1;
-}
+input[type=text], input[type=password], input[type=email], input[type=time] {
+    width: 260px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid var(--topYellow);
+    box-sizing: border-box;
+    background-color: var(--backYellow);
+    color: var(--fontColor);
+    font-family: defaultFont;
+    }
 
-.list2 {
-    grid-area: list2;
-}
+    .LoginLogo {
+        vertical-align: middle;
+        padding: 5px;
+        
+    }
 
-.list3 {
-    grid-area: list3;
-}
 
-*/
+    .detailsSign {
+        grid-area: detailsSign;
+        height: 50vh;
+        padding: 16px;
+    }
+
+.minimal {
+    background-repeat: no-repeat;
+    width: 260px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid var(--topYellow);
+    box-sizing: border-box;
+    background-color: var(--backYellow);
+    font-family: defaultFont;
+    }
+
+
+    .signUp {
+        background-color: var(--backYellow);
+        display: grid;
+        grid-template-areas: 
+        'top'
+        'logLogo'
+        'welcomeSign'
+        'changePageSign'
+        'detailsSign'
+        'navBarS';
+        width: 550px;
+    }
+
+    .changePageSign {
+        grid-area: changePageSign;
+        height: 8vh;
+        display: grid;
+        grid-template-areas: "sign log";
+        vertical-align: top;
+        
+    }
+
+    .welcomeSign {
+        grid-area: welcomeSign;
+        height: 5vh;
+        vertical-align: middle;
+        padding: 10px;
+        padding-top: 40px;
+    }
+
+    .navBarLogSign {
+        grid-area: navBarLS;
+        height: 12vh;
+        background-color: var(--backYellow);
+        width: 550px;
+    }
+
+
+    .navBarSign {
+        grid-area: navBarS;
+        height: 3vh;
+        background-color: var(--backYellow);
+        width: 550px;
+    }

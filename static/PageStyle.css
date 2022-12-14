@@ -30,9 +30,7 @@ a[href], input[type='submit'], input[type='image'], label[for], select, button, 
     /* border: black 1px solid;  */
 }
 
-body {
-    overflow: hidden;
-}
+
 
 .loggedIn {
     background-color: var(--backYellow);
@@ -137,7 +135,7 @@ body {
 
 .main {
     grid-area: main;
-    background-color: var(--topYellow);
+    background-color: var(--navColor);
     background-size: cover;
 }
 
@@ -166,8 +164,7 @@ body {
 }
 
 .active {
-    background-color: rgb(255, 255, 255);
-    
+    /* need to add!!!!! */
 }
 
 /* Load Meter Page */
@@ -298,7 +295,7 @@ body {
 }
 */
 
-table {
+.historyPage table {
     table-layout: fixed;
     border-collapse: collapse;
     /* overflow-y: scroll; */
@@ -308,44 +305,30 @@ table {
 
   }
   
-  thead th:nth-child(1) {
+  .historyPage thead th:nth-child(1) {
     width: 50%;
   }
   
-  thead th:nth-child(2) {
+  .historyPage thead th:nth-child(2) {
     width: 25%;
   }
   
-  thead th:nth-child(3) {
+  .historyPage thead th:nth-child(3) {
     width: 25%;
   }
   
   
-  table th,td {
+  .historyPage table th,td {
     padding: 20px;
     text-align: center;
     
   }
 
 
-/* tbody tr {
-    /*
-    background-image: url("../media/HistoryTable/tableRowBack.png");
-    background-size: contain;
-    background-size: 100%;
-    width: 550px;
-    height: 50px;
-    
-    background-repeat: no-repeat;
-    
 
   
-  }
 
-  */
-  
-
-   tr {
+  .historyPage tr {
     height: 10px;
     overflow: hidden;
     min-height: 40px;
@@ -354,7 +337,7 @@ table {
     align-items: center;
   }
 
-  tbody {
+  .historyPage tbody {
 
     height: 475px;
     /* width: 450px; */
@@ -363,24 +346,24 @@ table {
     display: block;
   }
 
-  tbody tr:nth-child(odd) {
+  .historyPage tbody tr:nth-child(odd) {
     background-color: var(--orange);
   }
   
-  tbody tr:nth-child(even) {
+  .historyPage tbody tr:nth-child(even) {
     background-color: var(--brown);
   }
 
-th {
+  .historyPage th {
     letter-spacing: 2px;
     position: sticky;
   }
   
-  td {
+  .historyPage td {
     letter-spacing: 1px;
   }
   
-  tbody td {
+  .historyPage tbody td {
     text-align: center;
 
   }
@@ -553,4 +536,331 @@ input[type=text], input[type=password], input[type=email], input[type=time] {
         height: 3vh;
         background-color: var(--backYellow);
         width: 550px;
+    }
+
+
+
+/* -------------------------------------*/
+/*       Admin Managment CSS Part       */
+/* -------------------------------------*/
+
+
+@media screen and (max-width: 1330px) {
+    .headingBist {
+        display: none;
+    }
+}
+
+.admin {
+    display: grid;
+    background-color: var(--backYellow);
+    grid-template-areas: 
+    "headBar"
+    "trainTable"
+    "changeHour";
+}
+
+.headBar {
+    background-color: var(--topYellow);
+    grid-area: headBar;
+    height: 100px;
+    width: 100%;
+    vertical-align: middle;
+    margin-bottom: 20px;
+    display: grid;
+    grid-template-areas: "bar link title";
+}
+
+.searchBar {
+    grid-area: bar;
+}
+
+.appLink {
+    grid-area: link;
+}
+
+.headingBist {
+    grid-area: title;
+}
+
+.tableCon {
+    grid-area: trainTable;
+    width: 100%;
+    display: block;
+    overflow: auto;
+    max-height: 50vh;
+}
+
+.trainTable {
+    width: 100%;   
+    padding: 20px;
+    
+}
+
+.trainTable table {
+    padding: 10px;
+    overflow: scroll;
+    max-height: 200px;
+   
+}
+
+.trainTable th {
+    position: sticky;
+    top: 0;
+    background-color: var(--orange);
+    padding: 10px;
+}
+
+.trainTable th, td {
+    padding: 8px 16px;
+}
+
+.trainTable tr:hover {
+    background-color: var(--orange);
+}
+
+.changeHour {
+    grid-area: changeHour;
+    padding: 10px;
+    border-top: #ea6c36 10px solid;
+    margin-top: 30px;
+}
+
+.searchBar {
+    float: left;
+    padding: 15px;
+}
+
+.headBar button {
+    display: inline-block;
+    width: 10px;
+    align-items: center;
+    padding: 20px;
+ 
+    background-image: url("../media/icons/search.png");
+    background-size: cover;
+}
+
+.headBar h1 {
+    float: right;
+    font-size: 50px;
+    padding: 7px 10px;
+}
+
+.headBar h2 {
+    float: left;
+    padding: 30px 50px;
+}
+
+.headBar h2:hover {
+    transform: scale(1.4); 
+}
+
+.changeHour h2 {
+    font-size: 80px;
+    padding: 10px;
+}
+
+.changeHour h3 {
+    padding: 20px;
+    font-size: 40px;
+}
+
+.changeHour h4 {
+    font-size: 15px;
+    display: inline-block;
+    padding-inline: 80px;
+}
+
+.changeHour h5 {
+    font-size: 20px;
+}
+
+.changeHour button {
+    width: 150px;
+}
+
+.inline {
+    display: inline-block;
+}
+
+.hoursClick {
+    transform:scale(1);
+    transition: all 100ms linear;
+}
+
+
+
+
+
+
+
+
+/* -------------------------------------*/
+/*            Button Animation          */
+/* -------------------------------------*/
+
+@-webkit-keyframes extend {
+    0% {
+        width: 600px;
+        height: 200px;
+        border-radius: 100px;
+        } 10% {
+        width: 610px;
+        height: 210px;
+        background: #fff;
+        margin-left: - 5px;
+        margin-top: - 5px;
+        } 20% {
+        width: 600px;
+        height: 200px;
+        background: #6fb07f;
+        margin-left: 0px;
+        margin-top: 0px;
+        } 100% {
+        width: 200px;
+        height: 200px;
+        border-radius: 100px;
+        margin-left: 190px;
+        background: #6fb07f;
+        }
+    }
+@keyframes extend {
+    0% {
+        width: 150px;
+        height: 40px;
+        border-radius: 10px;
+        } 10% {
+        width: 61px;
+        height: 21px;
+        background: #fff;
+        margin-left: - 5px;
+        margin-top: - 5px;
+        } 20% {
+        width: 60px;
+        height: 20px;
+        background: #6fb07f;
+        margin-left: 0px;
+        margin-top: 0px;
+        } 100% {
+        width: 20px;
+        height: 20px;
+        border-radius: 10px;
+        margin-left: 19px;
+        background: #6fb07f;
+        }
+    }
+
+@-webkit-keyframes disappear {
+    0% {
+        opacity: 1;
+        } 20% {
+        color: #fff;
+        } 100% {
+        opacity: 0;
+        }
+    }
+@keyframes disappear {
+    0% {
+        opacity: 1;
+        } 20% {
+        color: #fff;
+        } 100% {
+        opacity: 0;
+        }
+    }
+
+@-webkit-keyframes appear {
+    0% {
+        opacity: 0;
+        } 70% {
+        opacity: 0;
+        } 100% {
+        opacity: 1;
+        }
+    }
+@keyframes appear {
+    0% {
+        opacity: 0;
+        } 70% {
+        opacity: 0;
+        } 100% {
+        opacity: 1;
+        }
+    }
+
+
+    .changeHour button, submit {
+    border: none
+    }
+
+.cont {
+    width: 61px;
+    height: 10px;
+    padding: 20px;
+    padding: auto;
+    margin-bottom: 30px;
+    flex: auto;
+    }
+
+    .changeHour button {
+    border-width: 1px;
+    width: 150px;
+    height: 40px;
+    /*border-radius*/
+    border-radius: 30px;
+    background: #fff;
+    position: absolute;
+    border: 5px solid #6fb07f;
+    padding: 0px;
+
+    }
+
+
+
+    .changeHour button > span {
+    font-size: 20px;
+    color: #6fb07f
+    }
+
+    .changeHour img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+    opacity: 0
+    }
+
+.changeHour button:focus {
+    /*animation*/
+    -webkit-animation: extend 1s ease-in-out;
+    -ms-animation: extend 1s ease-in-out;
+    animation: extend 1s ease-in-out;
+    -webkit-animation-fill-mode: forwards;
+    /* Chrome, Safari, Opera */
+    animation-fill-mode: forwards
+    }
+
+    .changeHour button:focus > span {
+    /*animation*/
+    -webkit-animation: disappear 1s ease-in-out;
+    -ms-animation: disappear 1s ease-in-out;
+    animation: disappear 1s ease-in-out;
+    -webkit-animation-fill-mode: forwards;
+    /* Chrome, Safari, Opera */
+    animation-fill-mode: forwards
+    }
+
+    .changeHour button:focus > img {
+    /*animation*/
+    -webkit-animation: appear 1s ease-in-out;
+    -ms-animation: appear 1s ease-in-out;
+    animation: appear 1s ease-in-out;
+    -webkit-animation-fill-mode: forwards;
+    /* Chrome, Safari, Opera */
+    animation-fill-mode: forwards
     }

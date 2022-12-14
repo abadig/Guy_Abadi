@@ -32,3 +32,15 @@ function delay(time) {
     location.href('./LoadMeter.html');
   }
 
+
+  const myForm = document.getElementById('hourForm');
+  myForm.addEventListener('submit', handleSubmit);
+  var submitTimer;
+  
+  function handleSubmit(event) {
+  console.log('submitTimer set');
+    event.preventDefault();
+    submitTimer = setTimeout(() => {
+      this.submit();
+    }, 3000)
+  };

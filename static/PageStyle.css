@@ -154,8 +154,8 @@ a[href], input[type='submit'], input[type='image'], label[for], select, button, 
 }
 
 .mainIcon img {
-    height: 70px;
-    width: 90px;
+    height: 60px;
+    width: 70px;
 }
 
 .mainIcon {
@@ -164,7 +164,7 @@ a[href], input[type='submit'], input[type='image'], label[for], select, button, 
 }
 
 .active {
-    /* need to add!!!!! */
+    font-size: 25px;
 }
 
 /* Load Meter Page */

@@ -18,6 +18,13 @@ function clickButton() {
     counter++
 }
 
+const activePage = window.location.pathname;
+const navLinks = document.querySelectorAll('nav a').forEach(link => {    
+    if(link.href.includes(`${activePage}`)){
+      link.classList.add('active');
+    }
+  });
+
 function delay(time) {
     var d1 = new Date();
     var d2 = new Date();

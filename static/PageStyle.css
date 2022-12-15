@@ -1,6 +1,6 @@
 :root {
-    --backYellow: #6eb2cc;
-    --topYellow: #2f6a87;
+    --back: #6eb2cc;
+    --topColor: #2f6a87;
     --navColor: #d4f3f6;
     --fontColor: #000000;
     --navFontColor: #1c1c14;
@@ -33,7 +33,7 @@ a[href], input[type='submit'], input[type='image'], label[for], select, button, 
 
 
 .loggedIn {
-    background-color: var(--backYellow);
+    background-color: var(--back);
     display: grid;
     grid-template-areas: 
     'top'
@@ -57,7 +57,7 @@ a[href], input[type='submit'], input[type='image'], label[for], select, button, 
 .heading {
     grid-area: heading;
     height: 17vh;
-    background-color: var(--topYellow);
+    background-color: var(--topColor);
     width: 550px;
     text-align: center;
     font-size: 25px;
@@ -177,7 +177,7 @@ a[href], input[type='submit'], input[type='image'], label[for], select, button, 
 }
 
 .meterImg {
-    background-color: var(--backYellow);
+    background-color: var(--back);
     grid-area: meter;
     height: 43vh;
 }
@@ -200,7 +200,7 @@ a[href], input[type='submit'], input[type='image'], label[for], select, button, 
 }
 
 .loadMeter {
-    background-color: var(--backYellow);
+    background-color: var(--back);
     display: grid;
     grid-template-areas: 
     'top'
@@ -242,7 +242,7 @@ a[href], input[type='submit'], input[type='image'], label[for], select, button, 
 /* History Page */
 
 .historyPage {
-    background-color: var(--backYellow);
+    background-color: var(--back);
     display: grid;
     grid-template-areas: 
     'top'
@@ -373,7 +373,7 @@ a[href], input[type='submit'], input[type='image'], label[for], select, button, 
 
 
 .login {
-    background-color: var(--backYellow);
+    background-color: var(--back);
     display: grid;
     grid-template-areas: 
     'top'
@@ -460,9 +460,9 @@ input[type=text], input[type=password], input[type=email], input[type=time] {
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
-    border: 1px solid var(--topYellow);
+    border: 1px solid var(--topColor);
     box-sizing: border-box;
-    background-color: var(--backYellow);
+    background-color: var(--back);
     color: var(--fontColor);
     font-family: defaultFont;
     }
@@ -486,15 +486,15 @@ input[type=text], input[type=password], input[type=email], input[type=time] {
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
-    border: 1px solid var(--topYellow);
+    border: 1px solid var(--topColor);
     box-sizing: border-box;
-    background-color: var(--backYellow);
+    background-color: var(--back);
     font-family: defaultFont;
     }
 
 
     .signUp {
-        background-color: var(--backYellow);
+        background-color: var(--back);
         display: grid;
         grid-template-areas: 
         'top'
@@ -526,7 +526,7 @@ input[type=text], input[type=password], input[type=email], input[type=time] {
     .navBarLogSign {
         grid-area: navBarLS;
         height: 12vh;
-        background-color: var(--backYellow);
+        background-color: var(--back);
         width: 550px;
     }
 
@@ -534,7 +534,7 @@ input[type=text], input[type=password], input[type=email], input[type=time] {
     .navBarSign {
         grid-area: navBarS;
         height: 3vh;
-        background-color: var(--backYellow);
+        background-color: var(--back);
         width: 550px;
     }
 
@@ -553,7 +553,7 @@ input[type=text], input[type=password], input[type=email], input[type=time] {
 
 .admin {
     display: grid;
-    background-color: var(--backYellow);
+    background-color: var(--back);
     grid-template-areas: 
     "headBar"
     "trainTable"
@@ -561,7 +561,7 @@ input[type=text], input[type=password], input[type=email], input[type=time] {
 }
 
 .headBar {
-    background-color: var(--topYellow);
+    background-color: var(--topColor);
     grid-area: headBar;
     height: 100px;
     width: 100%;

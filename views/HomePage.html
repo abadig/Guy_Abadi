@@ -7,12 +7,16 @@
     <title>Bist's Gym</title>
     <link rel="stylesheet" href="../static/PageStyle.css">
     <script defer src="../static/GymScript.js"></script>
+    <script defer src="../static/HomePageScript.js"></script>
+      
+
 </head>
 <body onload="resetCounter()">
     <div class="loggedIn">
         <div class="top">
             <a href="./Login.html">התנתק</a>
             <a href="./Admin.html">לאתר מנהל</a>
+            
         </div>
         <div class="heading">
             <div class="headingTop">
@@ -23,11 +27,20 @@
                 <h1>בית הספר לטיסה</h1>
             </div>
         </div>
-        <div class="button"><img src="../media/button/button.png" alt="Start training button" height="100%" id="mainButton" onclick="clickButton()"></div>
+        <!-- <form id="training-form" method="POST" >
+            <input type="hidden" id="userID" name="userID" value="">
+            <input type="hidden" id="fullName" name="fullName" value="">
+            <input type="hidden" id="profile" name="profile" value="">
+            <input type="hidden" id="dateStamp" name="dateStamp" value="">
+            <input type="hidden" id="timeStamp" name="timeStamp" value="">
+          </form> -->
+          <!-- <input class="button" type="image" src="../media/button/button.png" alt="Submit" height="70%" id="mainButton" onclick="clickButton()"> -->
+          <div class="button"><img src="../media/button/button.png" alt="Start training button" height="100%" id="mainButton" onclick="clickButton()"></div>
+          
         <div class="underButton" id="buttonText"><h1>!לחץ כדי להתחיל להתאמן</h1></div>
         <div class="aboveHours"><h1>:שעות פתיחה</h1></div>
         <div class="hours">
-            <h1>19:30-22:30</h1>
+            <h1 id="displayHours">19:30-22:30</h1>
         </div>
         <div class="navBar">
             <div class="history">
